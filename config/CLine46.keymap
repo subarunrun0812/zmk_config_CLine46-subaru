@@ -216,7 +216,7 @@
 &mt LALT TAB          &kp Q      &kp W       &kp E      &kp R            &kp T                                    &kp Y             &kp U   &kp I       &kp O     &kp P          &kp BSPC
 &ctrl_esc LCTRL ESC   &kp A      &kp S      &kp D      &kp F            &kp G                                    &kp H             &kp J   &kp K       &kp L     &kp MINUS      &kp RET
 &kp LSHIFT            &kp Z      &kp X       &kp C      &kp V            &kp B                                    &kp N             &kp M   &kp COMMA   &kp DOT   &kp SLASH      &kp RSHIFT
-                      &trans      &trans      &trans     &mt LALT LANG2   &lt 1 SPACE   &kp LGUI        &kp RGUI         &lt 2 LANG1                                     &kp C_VOL_DN   &kp C_VOL_UP
+                      &kp GLOBE  &kp LCTRL   &kp LALT   &kp LGUI         &lt 1 SPACE   &kp LGUI        &kp RGUI   &lt 2 LC(UP)                                   &kp C_VOL_DN   &kp C_VOL_UP
             >;
         };
 
@@ -225,12 +225,13 @@
         //         演算記号（N + / M - / , *）。. と / は文字入力レイヤーのまま
         //   左手: 矢印
         //   Q: カーソルの左の1単語を削除（Option+Backspace）  T: カーソルの右の1単語を削除（Option+Delete）
+        //   C: コピー（Cmd+C）  V: ペースト（Cmd+V）
         //   右下の2キー: 画面の明るさ
         layer_1 {
             bindings = <
 &trans   &kp LA(BSPC)   &kp LA(LEFT)   &kp UP     &kp LA(RIGHT)   &kp LA(DEL)                          &kp N5     &kp N6      &kp N7      &kp N8   &kp N9   &trans
 &trans   &kp LG(LEFT)   &kp LEFT       &kp DOWN   &kp RIGHT       &kp LG(RIGHT)                        &kp N0     &kp N1      &kp N2      &kp N3   &kp N4   &trans
-&trans   &trans         &trans         &trans     &trans          &trans                               &kp PLUS   &kp MINUS   &kp ASTRK   &trans   &trans   &trans
+&trans   &trans         &trans         &kp LG(C)  &kp LG(V)       &trans                               &kp PLUS   &kp MINUS   &kp ASTRK   &trans   &trans   &trans
          &trans         &trans         &trans     &trans          &trans          &trans      &trans   &trans                              &kp C_BRI_DN   &kp C_BRI_UP
             >;
         };

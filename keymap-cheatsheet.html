@@ -228,9 +228,9 @@ const BASE = [
   k("Shift","mod"), k("Z"),k("X"),k("C"),k("V"),k("B"),
   k("N"),k("M"),k(",","sym"),k(".","sym"),k("/","sym"), k("Shift","mod"),
 
-  k("なし","none"), k("なし","none"), k("なし","none"),
-  k("英数","mod","⌥ Option"), k("Space","layer","数字と移動"), k("⌘","mod","","Command"),
-  k("⌘","mod","","Command"), k("かな","layer","記号"),
+  k("🌐 Fn","mod","","地球儀 / Fn"), k("⌃","mod","","Control"), k("⌥","mod","","Option"),
+  k("⌘","mod","","Command"), k("Space","layer","数字と移動"), k("⌘","mod","","Command"),
+  k("⌘","mod","","Command"), k("F3","layer","記号","Mission Control"),
   k("音量 −","media"), k("音量 ＋","media"),
 ];
 
@@ -242,7 +242,7 @@ const LAYERS = [
     held: [],
     keys: BASE,
     notes: [
-      "<kbd>Space</kbd> を長押しすると「数字と移動」、<kbd>かな</kbd> を長押しすると「記号」のレイヤーに切り替わります。",
+      "<kbd>Space</kbd> を長押しすると「数字と移動」、<kbd>F3</kbd>（Mission Control）を長押しすると「記号」のレイヤーに切り替わります。",
       "<kbd>Space</kbd> とその右隣の <kbd>⌘</kbd> を同時に押したままにすると「設定」のレイヤーに切り替わります。",
       "<kbd>Esc</kbd> は、押したまま別のキーを打つとすぐに <kbd>⌃ Control</kbd> として働きます。",
     ],
@@ -259,7 +259,7 @@ const LAYERS = [
       _, k("⌘ ←","nav","","行の先頭へ"), k("←","nav"), k("↓","nav"), k("→","nav"), k("⌘ →","nav","","行の末尾へ"),
       k("0","num"),k("1","num"),k("2","num"),k("3","num"),k("4","num"), _,
 
-      _, _,_,_,_,_,
+      _, _, _, k("コピー","edit","","⌘ C"), k("ペースト","edit","","⌘ V"), _,
       k("+","sym"), k("−","sym"), k("*","sym"), _,_,_,
 
       _,_,_,_,_,_, _,_, k("明るさ −","media"), k("明るさ ＋","media"),
@@ -267,13 +267,14 @@ const LAYERS = [
     notes: [
       "数字は、中段の <kbd>H J K L -</kbd> が 0〜4、上段の <kbd>Y U I O P</kbd> が 5〜9 です。",
       "左手は矢印キーです。<kbd>E S D F</kbd> が ↑ ← ↓ → になります。",
+      "左下の <kbd>C</kbd> でコピー（⌘ C）、<kbd>V</kbd> でペースト（⌘ V）ができます。",
       "<kbd>.</kbd> と <kbd>/</kbd> は文字入力レイヤーと同じなので、計算式もこのレイヤーのまま打てます。",
     ],
   },
   {
     id: "layer2", name: "記号", short: "記号",
-    enter: "右親指の かな を押したまま",
-    how: "右手の親指で <b>かな を押したまま</b>、ほかのキーを押します。",
+    enter: "右親指の F3（Mission Control）を押したまま",
+    how: "右手の親指で <b>F3（Mission Control）を押したまま</b>、ほかのキーを押します。",
     held: [43],
     keys: [
       _, k("'","sym","","Q: quote"), k('"',"sym","","W: w-quote"), k("=","sym","","E: equal"), k("^","sym","","R: raised"), k("~","sym","","T: tilde"),
