@@ -230,7 +230,7 @@ const BASE = [
 
   k("🌐 Fn","mod","","地球儀 / Fn"), k("⌃","mod","","Control"), k("⌥","mod","","Option"),
   k("⌘","mod","","Command"), k("Space","layer","数字と移動"), k("⌘","mod","","Command"),
-  k("⌘","mod","","Command"), k("F3","layer","記号","Mission Control"),
+  k("⌘","mod","","Command"), k("⌥","layer","記号","Option"),
   k("音量 −","media"), k("音量 ＋","media"),
 ];
 
@@ -242,7 +242,7 @@ const LAYERS = [
     held: [],
     keys: BASE,
     notes: [
-      "<kbd>Space</kbd> を長押しすると「数字と移動」、<kbd>F3</kbd>（Mission Control）を長押しすると「記号」のレイヤーに切り替わります。",
+      "<kbd>Space</kbd> を長押しすると「数字と移動」、右親指の <kbd>⌥ Option</kbd> を長押しすると「記号」のレイヤーに切り替わります。",
       "<kbd>Space</kbd> とその右隣の <kbd>⌘</kbd> を同時に押したままにすると「設定」のレイヤーに切り替わります。",
       "<kbd>Esc</kbd> は、押したまま別のキーを打つとすぐに <kbd>⌃ Control</kbd> として働きます。",
     ],
@@ -273,8 +273,8 @@ const LAYERS = [
   },
   {
     id: "layer2", name: "記号", short: "記号",
-    enter: "右親指の F3（Mission Control）を押したまま",
-    how: "右手の親指で <b>F3（Mission Control）を押したまま</b>、ほかのキーを押します。",
+    enter: "右親指の ⌥ Option を押したまま",
+    how: "右手の親指で <b>⌥ Option を押したまま</b>、ほかのキーを押します。",
     held: [43],
     keys: [
       _, k("'","sym","","Q: quote"), k('"',"sym","","W: w-quote"), k("=","sym","","E: equal"), k("^","sym","","R: raised"), k("~","sym","","T: tilde"),
