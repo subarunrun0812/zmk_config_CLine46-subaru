@@ -134,17 +134,6 @@
             bindings = <&kp COLON>, <&unshifted SEMI>;    // 単押し ':' / Shift ';'
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
-        // マウスレイヤーの - キー。単押しで -、押している間はスクロールレイヤー
-        // - 200ms 以内に離すとタップ。押している間に別のキーを押して離したときは、200ms たっていなくてもホールドになる
-
-        minus_scroll: minus_scroll {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
-        };
     };
 
     combos {
@@ -279,11 +268,11 @@
         //   U と I の同時押し: タブを閉じる（Cmd+W）  I と O の同時押し: 新しいタブ（Cmd+T）（combos で設定）
         //   J と K と L の同時押し: Mac のスクリーンショット（Cmd+Ctrl+Shift+4）（combos で設定）
         //   U と I と O の同時押し: Shottr のスクリーンショット（Cmd+Shift+2）（combos で設定）
-        //   -: 単押しで -、押している間スクロールレイヤー
+        //   -: 押している間スクロールレイヤー
         layer_4 {
             bindings = <
 &trans   &trans   &trans   &trans   &trans   &trans                        &trans           SCROLL_KEY_RIGHT   SCROLL_KEY_DOWN   SCROLL_KEY_LEFT   &trans      &trans
-&trans   &trans   &trans   &trans   &trans   &trans                        &trans           &mkp MB1           SCROLL_KEY_UP     &mkp MB2          &minus_scroll 5 MINUS   &trans
+&trans   &trans   &trans   &trans   &trans   &trans                        &trans           &mkp MB1           SCROLL_KEY_UP     &mkp MB2          &mo 5       &trans
 &trans   &trans   &trans   &trans   &trans   &trans                        &trans           &trans             &kp LEFT          &kp RIGHT         &trans      &trans
          &trans   &trans   &trans   &trans   &trans   &trans      &trans   &trans                                                                  &trans   &trans
             >;
