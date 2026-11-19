@@ -223,7 +223,7 @@ const BASE = [
   k("Y"),k("U"),k("I"),k("O"),k("P"), k("⌫","edit","","Backspace"),
 
   k("Esc","mod","⌃ Control"), k("A"),k("S"),k("D"),k("F"),k("G"),
-  k("H"),k("J"),k("K"),k("L"), k("-","sym"), k("⏎","edit","","Enter"),
+  k("H"),k("J"),k("K"),k("L"), k("-","layer","スクロール"), k("⏎","edit","","Enter"),
 
   k("Shift","mod"), k("Z"),k("X"),k("C"),k("V"),k("B"),
   k("N"),k("M"),k(",","sym"),k(".","sym"),k("/","sym"), k("Shift","mod"),
@@ -242,7 +242,7 @@ const LAYERS = [
     held: [],
     keys: BASE,
     notes: [
-      "<kbd>Space</kbd> を長押しすると「数字と移動」、<kbd>F3</kbd>（Mission Control）を長押しすると「記号」のレイヤーに切り替わります。",
+      "<kbd>Space</kbd> を長押しすると「数字と移動」、<kbd>F3</kbd>（Mission Control）を長押しすると「記号」、<kbd>-</kbd> を長押しすると「スクロール」のレイヤーに切り替わります。",
       "<kbd>Space</kbd> とその右隣の <kbd>⌘</kbd> を同時に押したままにすると「設定」のレイヤーに切り替わります。",
       "<kbd>Esc</kbd> は、押したまま別のキーを打つとすぐに <kbd>⌃ Control</kbd> として働きます。",
     ],
@@ -356,8 +356,8 @@ const LAYERS = [
   },
   {
     id: "layer5", name: "スクロール", short: "スクロール",
-    enter: "マウスレイヤーで - を押したまま",
-    how: "マウスレイヤーに入っている状態で、右手の <b>- を押したまま</b> にします。押している間は、<b>トラックボールを動かすと画面がスクロール</b> します。",
+    enter: "右手の - を押したまま",
+    how: "右手の <b>- を押したまま</b> にします（文字入力レイヤーからも、マウスレイヤーからも入れます）。押している間は、<b>トラックボールを動かすと画面がスクロール</b> します。",
     held: [22],
     keys: [
       _,_,_,_,_,_,
